@@ -1,0 +1,13 @@
+# Core (CPU): obfuscation, defence, BM25, statistics, figures
+numpy>=1.24
+scipy>=1.10
+rank_bm25>=0.2.2
+matplotlib>=3.7
+# Dense retrieval (Contriever, E5) and guardrail (DeBERTa)
+torch>=2.1
+sentence-transformers>=2.6
+transformers>=4.40
+sentencepiece>=0.1.99
+protobuf>=4.0
+# Generator (execution stage only, GPU)
+accelerate>=0.30

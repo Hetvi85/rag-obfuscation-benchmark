@@ -1,0 +1,92 @@
+{
+  "bm25/unicode_tags": {
+    "rho_star": 0.0,
+    "interior": false,
+    "asr_star": 0.0
+  },
+  "bm25/zero_width": {
+    "rho_star": 0.0,
+    "interior": false,
+    "asr_star": 0.0
+  },
+  "bm25/homoglyph": {
+    "rho_star": 0.5,
+    "interior": true,
+    "asr_star": 0.0015
+  },
+  "bm25/typoglycemia": {
+    "rho_star": 0.75,
+    "interior": true,
+    "asr_star": 0.0064444444444444445
+  },
+  "bm25/base64": {
+    "rho_star": 0.0,
+    "interior": false,
+    "asr_star": 0.0
+  },
+  "bm25/hybrid": {
+    "rho_star": 1.0,
+    "interior": false,
+    "asr_star": 0.17
+  },
+  "contriever/unicode_tags": {
+    "rho_star": 0.0,
+    "interior": false,
+    "asr_star": 0.0
+  },
+  "contriever/zero_width": {
+    "rho_star": 0.0,
+    "interior": false,
+    "asr_star": 0.0
+  },
+  "contriever/homoglyph": {
+    "rho_star": 0.5,
+    "interior": true,
+    "asr_star": 0.00036111111111111115
+  },
+  "contriever/typoglycemia": {
+    "rho_star": 0.5,
+    "interior": true,
+    "asr_star": 0.00415
+  },
+  "contriever/base64": {
+    "rho_star": 0.0,
+    "interior": false,
+    "asr_star": 0.0
+  },
+  "contriever/hybrid": {
+    "rho_star": 1.0,
+    "interior": false,
+    "asr_star": 0.17
+  },
+  "e5/unicode_tags": {
+    "rho_star": 0.0,
+    "interior": false,
+    "asr_star": 0.0
+  },
+  "e5/zero_width": {
+    "rho_star": 0.0,
+    "interior": false,
+    "asr_star": 0.0
+  },
+  "e5/homoglyph": {
+    "rho_star": 0.5,
+    "interior": true,
+    "asr_star": 0.001227777777777778
+  },
+  "e5/typoglycemia": {
+    "rho_star": 0.75,
+    "interior": true,
+    "asr_star": 0.005233333333333334
+  },
+  "e5/base64": {
+    "rho_star": 0.0,
+    "interior": false,
+    "asr_star": 0.0
+  },
+  "e5/hybrid": {
+    "rho_star": 1.0,
+    "interior": false,
+    "asr_star": 0.17
+  }
+}

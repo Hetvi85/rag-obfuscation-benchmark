@@ -1,0 +1,94 @@
+% ===== Numbers for the report, dataset = nq =====
+% n (queries) = 200    N (corpus passages) = 5200
+% P_gen measured: NO -> P_gen = 1 assumed (say so in Sec. V)
+
+% ---- Table tab:pret  (Recall@10, mean over seeds) ----
+% BM25
+ & Unicode Tags & 1.00 & .46 & .03 & .00 & .00\\
+ & Zero-width   & 1.00 & .29 & .00 & .00 & .00\\
+ & Homoglyph    & 1.00 & .91 & .45 & .11 & .01\\
+ & Typoglycemia & 1.00 & 1.00 & 1.00 & .97 & .75\\
+ & Base64       & 1.00 & .72 & .00 & .00 & .00\\
+ & Hybrid       & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
+% Contriever
+ & Unicode Tags & 1.00 & .12 & .01 & .00 & .00\\
+ & Zero-width   & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
+ & Homoglyph    & 1.00 & .42 & .11 & .04 & .01\\
+ & Typoglycemia & 1.00 & .98 & .83 & .48 & .12\\
+ & Base64       & 1.00 & .25 & .00 & .00 & .00\\
+ & Hybrid       & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
+% E5
+ & Unicode Tags & 1.00 & .28 & .03 & .01 & .00\\
+ & Zero-width   & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
+ & Homoglyph    & 1.00 & .78 & .37 & .18 & .10\\
+ & Typoglycemia & 1.00 & 1.00 & .94 & .79 & .40\\
+ & Base64       & 1.00 & .50 & .00 & .00 & .00\\
+ & Hybrid       & 1.00 & 1.00 & 1.00 & 1.00 & 1.00\\
+
+% ---- Table tab:eps  (evasion, mean with 95% CI half-width) ----
+Unicode Tags & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00}\\
+Zero-width   & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00}\\
+Homoglyph    & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00}\\
+Typoglycemia & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .01{\scriptsize$\pm$.01} & .01{\scriptsize$\pm$.01} & .00{\scriptsize$\pm$.00}\\
+Base64       & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00}\\
+Hybrid       & .00{\scriptsize$\pm$.00} & .00{\scriptsize$\pm$.00} & .03{\scriptsize$\pm$.01} & .09{\scriptsize$\pm$.03} & .17{\scriptsize$\pm$.05}\\
+
+% ---- In-text statistics ----
+% H1 (BM25, single-family pooled): r_s = -0.74, p <0.001
+% H1 (Contriever, single-family pooled): r_s = -0.59, p <0.001
+% H1 (E5, single-family pooled): r_s = -0.58, p <0.001
+%   H1 per family BM25/unicode_tags: r_s = -0.97, p <0.001
+%   H1 per family Contriever/unicode_tags: r_s = -0.96, p <0.001
+%   H1 per family E5/unicode_tags: r_s = -0.97, p <0.001
+%   H1 per family BM25/zero_width: r_s = -0.94, p <0.001
+%   H1 per family Contriever/zero_width: r_s = nan, p n/a (constant curve or scipy missing)
+%   H1 per family E5/zero_width: r_s = nan, p n/a (constant curve or scipy missing)
+%   H1 per family BM25/homoglyph: r_s = -0.99, p <0.001
+%   H1 per family Contriever/homoglyph: r_s = -0.98, p <0.001
+%   H1 per family E5/homoglyph: r_s = -0.99, p <0.001
+%   H1 per family BM25/typoglycemia: r_s = -0.88, p <0.001
+%   H1 per family Contriever/typoglycemia: r_s = -0.97, p <0.001
+%   H1 per family E5/typoglycemia: r_s = -0.94, p <0.001
+%   H1 per family BM25/base64: r_s = -0.89, p <0.001
+%   H1 per family Contriever/base64: r_s = -0.89, p <0.001
+%   H1 per family E5/base64: r_s = -0.89, p <0.001
+%   H1 per family BM25/hybrid: r_s = nan, p n/a (constant curve or scipy missing)
+%   H1 per family Contriever/hybrid: r_s = nan, p n/a (constant curve or scipy missing)
+%   H1 per family E5/hybrid: r_s = nan, p n/a (constant curve or scipy missing)
+% H2 (single-family pooled): r_s = 0.14, p =0.241
+
+% ---- Table tab:rhostar  (int. = CI-separated interior optimum) ----
+% columns: BM25 | Contriever | E5
+Unicode Tags & 0 & bd. & 0 & bd. & 0 & bd.\\
+Zero-width   & 0 & bd. & 0 & bd. & 0 & bd.\\
+Homoglyph    & 0.5 & bd. & 0.5 & bd. & 0.5 & bd.\\
+Typoglycemia & 0.75 & bd. & 0.5 & bd. & 0.75 & bd.\\
+Base64       & 0 & bd. & 0 & bd. & 0 & bd.\\
+Hybrid       & 1 & bd. & 1 & bd. & 1 & bd.\\
+% No CI-separated interior optimum found: H3 NOT supported -> rewrite Abstract/Sec. VI claims honestly.
+
+% ASR(rho) point estimates [95% CI], for the text / appendix:
+%   BM25/unicode_tags: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   BM25/zero_width: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   BM25/homoglyph: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   BM25/typoglycemia: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.01]  0.75:0.01[0.00,0.01]  1:0.00[0.00,0.00]
+%   BM25/base64: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   BM25/hybrid: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.01]  0.5:0.03[0.01,0.04]  0.75:0.09[0.06,0.12]  1:0.17[0.12,0.23]
+%   Contriever/unicode_tags: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   Contriever/zero_width: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   Contriever/homoglyph: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   Contriever/typoglycemia: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.01]  0.75:0.00[0.00,0.01]  1:0.00[0.00,0.00]
+%   Contriever/base64: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   Contriever/hybrid: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.01]  0.5:0.03[0.01,0.04]  0.75:0.09[0.06,0.12]  1:0.17[0.12,0.23]
+%   E5/unicode_tags: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   E5/zero_width: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   E5/homoglyph: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   E5/typoglycemia: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.01]  0.75:0.01[0.00,0.01]  1:0.00[0.00,0.00]
+%   E5/base64: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.00]  0.5:0.00[0.00,0.00]  0.75:0.00[0.00,0.00]  1:0.00[0.00,0.00]
+%   E5/hybrid: 0:0.00[0.00,0.00]  0.25:0.00[0.00,0.01]  0.5:0.03[0.01,0.04]  0.75:0.09[0.06,0.12]  1:0.17[0.12,0.23]
+
+% ---- Table tab:defence  (attacker picks best rho; mean over retrievers) ----
+% clean Recall@10 raw -> defended: BM25 0.820->0.820, Contriever 0.960->0.960, E5 0.995->0.995
+Format carriers (Tags/ZW) & .00 & .00 & \multirow{3}{*}{+0.0 pp}\\
+NFKC-invariant carriers   & .00 & .00 & \\
+Adaptive attacker         & .17 & .01 & \\

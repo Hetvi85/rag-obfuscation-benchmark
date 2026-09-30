@@ -1,0 +1,4 @@
+retriever,recall10_raw,recall10_defended
+bm25,0.82,0.82
+contriever,0.96,0.96
+e5,0.995,0.995
